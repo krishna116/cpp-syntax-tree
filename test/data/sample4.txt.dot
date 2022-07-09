@@ -1,0 +1,101 @@
+//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Please use dot(https://www.graphviz.org/) to draw this file to image.
+// 
+// The drawing command:
+//   dot -Tpdf <file.dot> -o <file.pdf>
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+digraph cpp_syntax_tree {
+    node[ordering = out];
+
+    0[label = "S"];
+        0 -> 1;
+        0 -> 2;
+        0 -> 9;
+        0 -> 10;
+    1[label = "while" color = "red"];
+    2[label = "E"];
+        2 -> 3;
+        2 -> 5;
+        2 -> 7;
+    3[label = "id"];
+        3 -> 4;
+    4[label = "a"];
+    5[label = "relop"];
+        5 -> 6;
+    6[label = "<"];
+    7[label = "id"];
+        7 -> 8;
+    8[label = "b"];
+    9[label="do" color = "red"];
+    10[label = "S1"];
+        10 -> 11;
+        10 -> 12;
+        10 -> 19;
+        10 -> 20;
+        10 -> 32;
+        10 -> 33;
+    11[label = "if" color = "red"];
+    12[label = "E"];
+        12 -> 13;
+        12 -> 15;
+        12 -> 17;
+    13[label = "id"];
+        13 -> 14;
+    14[label = "c"];
+    15[label = "relop"];
+        15 -> 16;
+    16[label = "<"];
+    17[label = "id"];
+        17 -> 18;
+    18[label = "d"];
+    19[label = "then" color = "red"];
+    20[label = "S1"];
+        20 -> 21;
+        20 -> 23;
+        20 -> 24;
+    21[label = "id"];
+        21 -> 22;
+    22[label = "x"];
+    23[label = "="];
+    24[label = "E"];
+        24 -> 25;
+        24 -> 28;
+        24 -> 29;
+    25[label = "E"];
+        25 -> 26;
+    26[label = "id"];
+        26 -> 27;
+    27[label = "y"];
+    28[label = "+"];
+    29[label = "E"];
+        29 -> 30;
+    30[label = "id"];
+        30 -> 31;
+    31[label = "z"];
+    32[label = "else" color = "red"];
+    33[label = "S2"];
+        33 -> 34;
+        33 -> 36;
+        33 -> 37;
+    34[label = "id"];
+        34 -> 35;
+    35[label = "x"];
+    36[label = "="];
+    37[label = "E"];
+        37 -> 38;
+        37 -> 41;
+        37 -> 42;
+    38[label = "E"];
+        38 -> 39;
+    39[label = "id"];
+        39 -> 40;
+    40[label = "y"];
+    41[label = "-"];
+    42[label = "E"];
+        42 -> 43;
+    43[label = "id"];
+        43 -> 44;
+    44[label = "z"];
+}

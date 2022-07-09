@@ -1,0 +1,40 @@
+/**
+ * The MIT License
+ *
+ * Copyright 2022 Krishna sssky307@163.com
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+#pragma once
+
+#include <string>
+
+namespace cst
+{
+namespace AppInfo
+{
+    auto constexpr AppName      = "${PROJECT_NAME}";
+    constexpr auto VersionMajor = ${PROJECT_VERSION_MAJOR};
+    constexpr auto VersionMinor = ${PROJECT_VERSION_MINOR};
+    constexpr auto VersionPatch = ${PROJECT_VERSION_PATCH};
+    constexpr auto VersionStr   = "${PROJECT_NAME} version ${PROJECT_VERSION}";            
+            
+    auto constexpr HelpStr = R"(${PROJECT_NAME} [options] <file>
+
+Draw syntax tree from the input file.
+
+Options:
+    -t, --type   <type>   specify output file type(pdf/svg/png/dot).
+    -o, --output <file>   specify output file name.
+        --hns    <n>      specify horizontal node separation.
+        --vns    <n>      specify vertical node separation.
+        --pmw    <n>      specify page margin width.
+        --pmh    <n>      specify page margin height.
+        --fts    <n>      specify font size.
+    -h, --help            show help.
+    -v, --version         show version.)";
+
+} // namespace AppInfo
+} // namespace cst

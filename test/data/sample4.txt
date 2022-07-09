@@ -1,0 +1,45 @@
+[S
+    [R"(label = "while" color = "red")"]
+    [E
+        [id a]
+        [relop <]
+        [id b]
+    ]
+    [R"(label="do" color = "red")"]
+    [S1
+        [R"(label = "if" color = "red")"]
+        [E
+            [id c]
+            [relop <]
+            [id d]
+        ]
+        [R"(label = "then" color = "red")"]
+        [S1
+            [id x]
+            [=]
+            [E
+                [E
+                    [id y]
+                ]
+                [+]
+                [E
+                    [id z]
+                ]
+            ]
+        ]
+        [R"(label = "else" color = "red")"]
+        [S2
+            [id x]
+            [=]
+            [E
+                [E
+                    [id y]
+                ]
+                [-]
+                [E
+                    [id z]
+                ]
+            ]
+        ]
+    ]
+]

@@ -1,0 +1,45 @@
+[S
+    [while]
+    [E
+        [id a]
+        [relop <]
+        [id b]
+    ]
+    [do]
+    [S1
+        [if]
+        [E
+            [id c]
+            [relop <]
+            [id d]
+        ]
+        [then]
+        [S1
+            [id x]
+            [=]
+            [E
+                [E
+                    [id y]
+                ]
+                [+]
+                [E
+                    [id z]
+                ]
+            ]
+        ]
+        [else]
+        [s2
+            [id x]
+            [=]
+            [E
+                [E
+                    [id y]
+                ]
+                [-]
+                [E
+                    [id z]
+                ]
+            ]
+        ]
+    ]
+]
